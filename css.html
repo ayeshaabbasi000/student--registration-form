@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - Ayesha Abbasi</title>
+
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h2 { 
+            text-align: center; 
+            color: #2d3436; 
+            margin-top: 0; 
+        }
+
+        .input-group { 
+            margin-bottom: 15px; 
+        }
+
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: 600; 
+            color: #444; 
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"], 
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .inline-group { 
+            display: flex; 
+            gap: 15px; 
+            padding: 5px 0; 
+        }
+
+        .inline-item { 
+            display: flex; 
+            align-items: center; 
+            gap: 5px; 
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-submit:hover { 
+            background-color: #0056b3; 
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="form-card">
+    <h2>Student Registration</h2>
+
+    <form>
+        <!-- Name -->
+        <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <!-- Email -->
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <!-- Password -->
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+        </div>
+
+        <!-- City -->
+        <div class="input-group">
+            <label for="city">City</label>
+            <select id="city" name="city">
+                <option value="islamabad">Islamabad</option>
+                <option value="karachi">Karachi</option>
+                <option value="lahore">Lahore</option>
+            </select>
+        </div>
+
+        <!-- Gender -->
+        <div class="input-group">
+            <label>Gender</label>
+            <div class="inline-group">
+                <div class="inline-item">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male" style="font-weight: normal; margin:0;">Male</label>
+                </div>
+                <div class="inline-item">
+                    <input type="radio" id="female" name="gender" value="female" checked>
+                    <label for="female" style="font-weight: normal; margin:0;">Female</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hobbies -->
+        <div class="input-group">
+            <label>Hobbies</label>
+            <div class="inline-group">
+                <div class="inline-item">
+                    <input type="checkbox" id="traveling" name="hobbies" value="travelling">
+                    <label for="traveling" style="font-weight: normal; margin:0;">Travelling</label>
+                </div>
+                <div class="inline-item">
+                    <input type="checkbox" id="coding" name="hobbies" value="coding">
+                    <label for="coding" style="font-weight: normal; margin:0;">Coding</label>
+                </div>
+                <div class="inline-item">
+                    <input type="checkbox" id="reading" name="hobbies" value="reading">
+                    <label for="reading" style="font-weight: normal; margin:0;">Reading</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-submit">Submit Registration</button>
+
+    </form>
+</div>
+
+</body>
+</html>
